@@ -14,10 +14,11 @@
 # */5 * * * * root [caminho do executavel]/hMon.sh
 # e salve, o valor "5" pode ser modificado por vc como o intervalo de tempo que o script sera executado
 # caso nao funcione execute sudo systemctl restart cron.
-
+#
+# obs : n se esqueça de modificar a variavel folder para apontar para o endereço onde o script esta ou onde ficarão os logs.
 ######################################################
 
-folder=/usr/local/hd
+folder=/[local onde se encontra o script]
 
 tempSda=$(hddtemp /dev/sda | cut -c 34-35)
 tempSdb=$(hddtemp /dev/sdb | cut -c 30-31)
